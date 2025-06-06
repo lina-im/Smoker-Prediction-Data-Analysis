@@ -16,8 +16,8 @@ df['smoker'] = df['smoker'].map({'yes': 1, 'no': 0})
 df = pd.get_dummies(df, columns=['sex', 'region'], drop_first=True)
 
 #define input (X) and output (y)
-X = df.drop(columns=['smoker'])  # Features
-y = df['smoker']  # Target variable
+X = df.drop(columns=['smoker'])
+y = df['smoker']
 
 #standardize numeric features for better model performance
 scaler = StandardScaler()
